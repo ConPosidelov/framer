@@ -1,0 +1,84 @@
+@import '../../stylesheets/colors';
+@import '../../stylesheets/common';
+
+.Index {
+ 
+  font-family: sans-serif;
+  font-size: 14px;
+  
+
+  .panel_wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  .toolbar_panel_wrap {
+    position: relative;
+  }
+  .main_panels{
+      flex-grow:1;
+      position: relative;
+
+      .main_panels_wrap {
+        display: flex;
+        flex-direction: column;
+        .layer_panel_wrap{
+          flex-grow:1;
+          position: relative;
+        }
+        .timeline_panel_wrap{
+          position: relative;
+        }
+        .invert_order {
+          order: -1;
+        }
+      }
+  }
+  .separator {
+    width: 1px;
+  }
+  .add_panel_wrap{
+    position: relative;
+   
+    .add_panel_control {
+      height: 15px;
+      .simpleButton {
+        box-shadow: none;
+        margin-top: -1px;
+        
+       
+        &:hover {
+          border: none;
+          margin-top: -1px;
+          i{
+            transform: scale(1.4);
+          }
+        }
+      }
+    }
+    .add_panel_body {
+      flex-grow:1;
+
+    }
+  }
+
+  &.skin_white{
+
+    background-color: $BGColorSkinWhite;  
+    
+    .add_panel_wrap{
+      .add_panel_control {
+        border: 1px solid $panelsBorderSkinWhite;
+      }
+      .add_panel_body {
+        
+      }
+
+    }
+
+    
+  }
+
+}
+

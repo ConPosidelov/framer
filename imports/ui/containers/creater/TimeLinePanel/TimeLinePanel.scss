@@ -1,0 +1,36 @@
+@import '../../../stylesheets/colors';
+@import '../../../stylesheets/common';
+@import '../../../stylesheets/mixin_box_shadow';
+
+
+
+.Index {
+    .time_line_panel{
+
+        .time_line_panel_header{
+
+        }
+        .time_line_panel_body{
+
+
+        }
+    }
+
+    &.skin_white{
+        .time_line_panel{
+            border: 1px solid $panelsBorderSkinWhite;
+            //border-top: 1px solid $panelsBorderSkinWhite;
+            //border-right: 1px solid $panelsBorderSkinWhite;
+            .time_line_panel_header{
+
+            }
+            .time_line_panel_body{
+
+                
+            }
+
+        }
+
+    }
+
+}

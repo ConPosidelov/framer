@@ -1,0 +1,118 @@
+//
+
+$pointSizeMain1: 8px;
+$pointSizeMargin1: -4px;
+
+.universal_wrapper{
+    position: absolute;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    box-sizing: content-box;
+    border: none;
+
+    &:hover {
+        -webkit-box-shadow: 0 0 43px 3px rgba(103,212,252,0.91) ;
+        box-shadow: 0 0 43px 3px rgba(103,212,252,0.91) ;
+    }
+
+    &.hidden {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        &:hover {
+            -webkit-box-shadow: none;
+            box-shadow: none; 
+        }
+    }
+    .contentContainer{
+        overflow: hidden;
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;            
+    }
+
+    &.active_1 {
+        border: dashed 1px #000;
+    }
+
+    .controlPoint {
+        position: absolute;
+        z-index: 2;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        &:hover {
+            background-color: #FF4500; 
+        }
+
+        &.point_1 {
+            border: solid 1px #000;
+            width: $pointSizeMain1;
+            height: $pointSizeMain1;
+            margin-left: $pointSizeMargin1;
+            margin-top: $pointSizeMargin1;
+        }
+
+
+        .rotateWrap{
+            position: absolute;
+            width: 32px;
+            height: 14px;
+            //transform: rotate(-45deg);
+
+            .rotatePoint{
+                position: relative;
+                width: 32px;
+                height: 14px;
+                //border: 1px solid $colorGrey-1;
+                overflow: hidden;
+                cursor: move;
+
+                .arrLeft{
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    width: 8px;
+                    height: 8px;
+                    border-left: 2px solid rgba(255,69,0,.18);
+                    border-bottom: 2px solid rgba(255,69,0,.18);
+                }
+
+                .arrRight{
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-right:  2px solid rgba(255,69,0,.18);
+                    border-bottom: 2px solid rgba(255,69,0,.18);
+                }
+
+                .cir{
+                    margin-top: 5px;
+                    margin-left: -3px;
+                    width: 38px;
+                    height: 38px;
+                    border: 2px solid rgba(255,69,0,.18);
+                    border-radius: 50%;
+                }
+            }
+
+
+            &:hover {
+                .arrLeft {
+                    border-color: #FF4500;
+                }
+
+                .arrRight{
+                    border-color: #FF4500;
+                }
+
+                .cir{
+                    border-color: #FF4500;
+                }
+            }
+        }
+    }
+
+}

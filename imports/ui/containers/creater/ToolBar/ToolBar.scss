@@ -1,0 +1,53 @@
+@import '../../../stylesheets/colors';
+@import '../../../stylesheets/common';
+@import '../../../stylesheets/mixin_box_shadow';
+
+
+
+.Index {
+
+    .tool_bar {
+
+        .tool_bar_header {
+            height: 15px;
+        }
+        .mainSect {
+            padding-left: 1px;
+        } 
+        .contentSect {
+            padding-left: 1px;
+        }
+
+        .simpleButton {
+            margin-bottom: 2px;
+
+        }
+    }
+
+    &.skin_white{
+        
+        .tool_bar {
+            border: 1px solid $panelsBorderSkinWhite;
+            //border-top: 1px solid $panelsBorderSkinWhite;
+            //border-right: 1px solid $panelsBorderSkinWhite;
+           .tool_bar_header {
+                
+                .simpleButton {
+                    box-shadow: none;
+                    margin-top: -5px;
+                    &:hover {
+                        border: none;
+                        i{
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+            }
+            
+        }
+         
+        .simpleButton {
+            @include box-shadow(0, 0, 5px, $shadowColorSkinWhite, inset);
+        }
+    }
+}
